@@ -32,7 +32,7 @@ def ahorcado(word_choice):
                         print('¡Bien! Adivinaste una letra')
                         break
                     else:
-                        lifes = lifes -1
+                        lifes = lifes - 1
                         print('Error... intentalo de nuevo. Perdon pero perdiste una vida.')
                         print("Te quedan " + str(lifes) + " vidas")
                         
@@ -102,14 +102,15 @@ def ahorcado(word_choice):
                 break
             status = ""
             missing_letters = len(word_choice)
+            
             for letter in word_choice:
                 if letter in word_choice:
-                    status = status + letter
-                    missing_letters = missing_letters - 1
+                    status = status + letter    
                 else:
                     status = status + "_"
-                    # missing_letters = missing_letters + 1
-                print(ahorcadi + status)
+                    missing_letters = missing_letters + 1
+                missing_letters = missing_letters    
+            print(ahorcadi + status)
  
  
         if missing_letters == 0:
